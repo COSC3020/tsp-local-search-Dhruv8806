@@ -51,3 +51,12 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+### Time Complexity 
+
+In the worst case, each iteration of the TSP Local Search algorithm has a time complexity of $\ O(n^3)$. This complexity arises from the initial creation and randomization of the route array, each contributing $O(n)$, and the nested loops involving a two-opt swap with a time complexity of $\ O(n^2)$. Therefore, the overall time complexity per iteration is $\ O(n^3)$. Considering the worst-case exploration of permutations within each iteration and the total number of iterations being $2^n$, the overall time complexity is $\ O(n^3 * 2^n)$ .
+
+### Memory Complexity
+
+Memory complexity is $O(n)$ as the algorithm involves the arrays such as "route" and "newRoute," each with $n$ items. Additional variables introduce a constant memory, resulting in an overall memory complexity of $O(n)$ .
+
