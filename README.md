@@ -54,7 +54,7 @@ reasoning, to this markdown file.
 
 ### Time Complexity 
 
-In the worst case, each iteration of the TSP Local Search algorithm has a time complexity of $\ O(n^3)$. This complexity arises from the initial creation and randomization of the route array, each contributing $O(n)$, and the nested loops involving a two-opt swap with a time complexity of $\ O(n^2)$. Therefore, the overall time complexity per iteration is $\ O(n^3)$. Considering the worst-case exploration of permutations within each iteration and the total number of iterations being $2^n$, the overall time complexity is $\ O(n^3 * 2^n)$ .
+The worst case, time complexity of the "tsp_ls" algorithm is $\ O(n^3)$ . The initilization and random route generation contribute O(n) time complexity, while in the main loop is for local search iterations, has a complexity of $\ O(n^2)$ as it explores different combinations of $i$ and $k$ . The 2-opt swap operation within the loop takes $O(n)$ time, and the "evaluateroute" function is $O(n)$. Considering the worst-case, where the main loop iterates $(n * (n-1)/2)$ times, the overall time complexity of the algorithm is $O(n^3)$ in the worst case. 
 
 ### Memory Complexity
 
