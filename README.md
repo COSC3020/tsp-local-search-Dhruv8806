@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13051654&assignment_repo_type=AssignmentRepo)
 # Traveling Salesperson Problem -- Local Search
 
 This exercise is about the Traveling Salesperson Problem I mentioned in the
@@ -50,3 +51,12 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+### Time Complexity 
+
+The worst case, time complexity of the "tsp_ls" algorithm is $\ O(n^3)$ . The initilization and random route generation contribute O(n) time complexity, while in the main loop is for local search iterations, has a complexity of $\ O(n^2)$ as it explores different combinations of $i$ and $k$ . The 2-opt swap operation within the loop takes $O(n)$ time, and the "evaluateroute" function is $O(n)$. Considering the worst-case, where the main loop iterates $(n * (n-1)/2)$ times and exploration is set to "true" in each iteration, the overall time complexity of the algorithm becomes $O(n^3 * n) = O(n^4)$ in the worst case. 
+
+### Memory Complexity
+
+Memory complexity is $O(n)$ as the algorithm involves the arrays such as "route" and "newRoute," each with $n$ items. Additional variables introduce a constant memory, resulting in an overall memory complexity of $O(n)$ .
+
