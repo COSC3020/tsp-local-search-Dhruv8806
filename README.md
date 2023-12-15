@@ -54,7 +54,7 @@ reasoning, to this markdown file.
 
 ### Time Complexity 
 
-The worst case, time complexity of the "tsp_ls" algorithm is $\ O(n^3)$ . The initilization and random route generation contribute O(n) time complexity, while in the main loop is for local search iterations, has a complexity of $\ O(n^2)$ as it explores different combinations of $i$ and $k$ . The 2-opt swap operation within the loop takes $O(n)$ time, and the "evaluateroute" function is $O(n)$. Considering the worst-case, where the main loop iterates $(n * (n-1)/2)$ times, the overall time complexity of the algorithm is $O(n^3)$ in the worst case. 
+The worst case, time complexity of the "tsp_ls" algorithm is $\ O(n^3)$ . The initilization and random route generation contribute O(n) time complexity, while in the main loop is for local search iterations, has a complexity of $\ O(n^2)$ as it explores different combinations of $i$ and $k$ . The 2-opt swap operation within the loop takes $O(n)$ time, and the "evaluateroute" function is $O(n)$. Considering the worst-case, where the main loop iterates $(n * (n-1)/2)$ times and exploration is set to "true" in each iteration, the overall time complexity of the algorithm becomes $O(n^3 * n) = O(n^4)$ in the worst case. 
 
 ### Memory Complexity
 
